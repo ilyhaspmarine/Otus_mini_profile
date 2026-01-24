@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg
+alembic
+psycopg2-binary
+pydantic
+email-validator
+prometheus_fastapi_instrumentator
