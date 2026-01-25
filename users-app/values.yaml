@@ -22,8 +22,9 @@ service:
   portName: http
 
 ingress:
-  pathType: Prefix
+  pathType: ImplementationSpecific
   host: arch.homework
+  path: /profile
   ingressClassName: nginx
 
 postgresql:

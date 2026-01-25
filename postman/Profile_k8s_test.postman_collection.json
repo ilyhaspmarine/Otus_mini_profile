@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "37f29204-48e0-470e-afff-d608f2403664",
+		"name": "Profile_k8s_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9701531"
+	},
+	"item": [
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/profile/health",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/profile/health/",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"health",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Create_1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"AliWon\", \"firstName\": \"Alice\", \"lastName\": \"Wondergrift\", \"email\": \"alva@example.com\", \"phone\": \"+79999999999\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "arch.homework/profile/users/",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Create_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"MartSep\", \"firstName\": \"Martin\", \"lastName\": \"Septim\", \"email\": \"heirbastard@tamriel.com\", \"phone\": \"+74444444444\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "arch.homework/profile/users/",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\": \"Alice\", \"lastName\": \"Wondergrift\", \"email\": \"alca@example.com\", \"phone\": \"+79999999999\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "arch.homework/profile/AliWon",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"AliWon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Get_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/profile/users/AliWon",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"users",
+						"AliWon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Get_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/users/MartSep",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"users",
+						"MartSep"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users_GetList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"AliWon\", \"firstName\": \"Alice\", \"lastName\": \"Wondergrift\", \"email\": \"al4344va@example.com\", \"phone\": \"+79999999999\"}"
+				},
+				"url": {
+					"raw": "arch.homework/users/",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserDelete_1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/profile/users/AliWon",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"users",
+						"AliWon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserDelete_2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/profile/users/MartSep",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"users",
+						"MartSep"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users_GetList EMPTY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"AliWon\", \"firstName\": \"Alice\", \"lastName\": \"Wondergrift\", \"email\": \"al4344va@example.com\", \"phone\": \"+79999999999\"}"
+				},
+				"url": {
+					"raw": "arch.homework/profile/users/",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"profile",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metrics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"AliWon\", \"firstName\": \"Alice\", \"lastName\": \"Wondergrift\", \"email\": \"alca@example.com\", \"phone\": \"+79999999999\"}"
+				},
+				"url": {
+					"raw": "arch.homework/users/metrics",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"users",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5xx",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/cause-5xx",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"cause-5xx"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
