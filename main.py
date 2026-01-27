@@ -14,7 +14,7 @@ app = FastAPI(title="Users API", version="1.0.0")
 def healthcheck():
     return {'status': 'OK'}
 
-@app.post("/users/", response_model=UserSchema, status_code=status.HTTP_201_CREATED)
+@app.post("/users", response_model=UserSchema, status_code=status.HTTP_201_CREATED)
 async def create_user(user: UserCreate, db=Depends(get_db)):
     db_user = UserModel(
         username = user.username, 
@@ -70,7 +70,7 @@ async def delete_user(username: str, db=Depends(get_db)):
         raise HTTPException(status_code=400, detail="Delete failed")
     return
 
-@app.get("/users/", response_model=List[UserSchema])
+@app.get("/users", response_model=List[UserSchema])
 async def list_users(skip: int = 0, limit: int = 10, db=Depends(get_db)):
     result = await db.execute(select(UserModel).offset(skip).limit(limit))
     users = result.scalars().all()
