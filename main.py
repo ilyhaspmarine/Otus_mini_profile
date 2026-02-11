@@ -84,5 +84,5 @@ def cause_5xx():
     else:
         return {"message": "OK (25% chance)"}
 
-# Prometheus
-Instrumentator().instrument(app).expose(app, endpoint="/metrics")
+# # Prometheus
+# Instrumentator().instrument(app).expose(app, endpoint="/metrics")
