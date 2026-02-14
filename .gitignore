@@ -5,3 +5,4 @@
 ./Dockerfile
 ./nginx/
 *.pyc
+/openapi

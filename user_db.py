@@ -3,15 +3,15 @@ from sqlalchemy.orm import sessionmaker
 import os
 from urllib.parse import urlunparse
 
-driver = os.getenv("DB_DRIVER_ASYNC")
+driver = os.getenv("DB_DRIVER_ASYNC", "asyncpg")
 if not driver:
     raise ValueError("The USERS_DB_DRIVER_SYNC environment variable is not set.")
 driver = "postgresql+" + driver
-username = os.getenv("DB_USER")
-password = os.getenv("DB_PASSWORD")
-host = os.getenv("DB_HOST")
+username = os.getenv("DB_USER", "username")
+password = os.getenv("DB_PASSWORD", "username")
+host = os.getenv("DB_HOST", "postgre")
 port = os.getenv("DB_PORT", "5432")
-database = os.getenv("DB_NAME")
+database = os.getenv("DB_NAME", "users")
 
 comp = (
     driver,  # scheme
